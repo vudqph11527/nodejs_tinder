@@ -1,7 +1,7 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
 const app = express();
-const port =process.env.PORT || '3000'
+const port =process.env.PORT || '8080'
 const path = require('path');
 const router = require('./routers/index_rts');
 
@@ -15,4 +15,6 @@ router(app);
 
 
 
-app.listen(port);
+app.listen(port,()=>{
+    console.log(`App listening at http://localhost:${port}`);
+});
