@@ -1,9 +1,9 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
 const app = express();
-const port = 8080;
+const port = process.env.port || 8080;
 const path = require('path');
-const router = require('./routers/index');
+const router = require('./routers/index_rts');
 
 
 app.engine('handlebars',handlebars());

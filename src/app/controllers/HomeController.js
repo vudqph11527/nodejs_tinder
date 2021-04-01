@@ -1,6 +1,6 @@
-class homeController{
+class HomeController{
     index(req,res){
         return res.render('home');
     }
 }
-module.exports = new homeController;
+module.exports = new HomeController;
