@@ -1,16 +1,14 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
 const app = express();
-
 const port =process.env.PORT || 1212
-
 const path = require('path');
-const router = require('./routers/index_rts');
 
+const router = require('./routers/index_rts');
+app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars',handlebars());
 app.set('view engine','handlebars');
 app.set('views',path.join(__dirname,'resources','views'));
-
 router(app);
 
 
