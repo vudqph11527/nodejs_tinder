@@ -1,0 +1,18 @@
+<div class="mt-4">
+    <div class="row">
+        {{#each users}}
+        <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="card">
+                <a href="/information/{{this.slug}}">
+                <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">{{this.fullName}}</h5>
+                    <p class="card-text">{{this.email}}</p>
+                   <p class="card-text">{{this.desciption}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
